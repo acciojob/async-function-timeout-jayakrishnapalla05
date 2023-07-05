@@ -6,7 +6,7 @@ const outputDiv = document.getElementById('output');
 
 async function showMessageWithDelay() {
   const text = textInput.value;
-  const delay = parseInt(delayInput.value, 10);
+  const delay = parseInt(delayInput.value)*1000;
   await new Promise(resolve => setTimeout(resolve, delay));
   outputDiv.innerText = text;
 }
